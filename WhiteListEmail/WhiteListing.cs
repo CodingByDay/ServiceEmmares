@@ -232,6 +232,7 @@ namespace WhiteListEmail
                                 {
                                     htmlDoc.Save(writer);
                                     content = writer.ToString();
+                               
                                 }
 
                                 Regex r5 = new Regex(@"(?i)unsubscribe.*?</a>");
