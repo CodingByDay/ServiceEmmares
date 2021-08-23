@@ -1,5 +1,3 @@
-C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.csprojAssemblyReference.cache
-C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.csproj.CoreCompileInputs.cache
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\WhiteListEmail.exe.config
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\WhiteListEmail.exe
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\WhiteListEmail.pdb
@@ -36,6 +34,8 @@ C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\System.
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\bin\Debug\Topshelf.xml
+C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.csprojAssemblyReference.cache
+C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.csproj.CoreCompileInputs.cache
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.csproj.CopyComplete
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.exe
 C:\Users\emmaresmvp\source\repos\WhiteListEmail\WhiteListEmail\obj\Debug\WhiteListEmail.pdb

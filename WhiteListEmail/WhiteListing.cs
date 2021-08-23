@@ -274,14 +274,18 @@ namespace WhiteListEmail
                                     try
                                     {
                                         wc4.UploadString(hostelastic + "/emmares_search_test/_doc", jsonbody);
+                                        var urlwithoutsecureprotocol = "http://emmares.com/SearchAPI/Get_File/" + messageId;
+
+                                        WaitForItToWork(urlwithoutsecureprotocol, messageId + ".jpg", "test");
+
                                         //delete from pop
                                         DeleteMessageByUID(uID);
                                         string potdomaila = "C:/inetpub/wwwroot/App_Data/pages/";
                                         System.IO.File.WriteAllText(potdomaila + messageId + ".html", content, Encoding.UTF8);
+                                        i++;
                                     }
                                     catch (Exception ex)
                                     {
-                                        throw new NotImplementedException();
                                         string logerror = "C:/inetpub/wwwroot/App_Data/errors/";
                                         System.IO.File.WriteAllText(logerror + messageId + ".txt", jsonbody, Encoding.UTF8);
                                     }
@@ -339,6 +343,26 @@ namespace WhiteListEmail
                 client.Disconnect(true);
             }
         }
+
+        private bool WaitForItToWork(string Url, string FileName, string PathToPicture)
+        {
+            var argument = @"C:\\Users\emmaresmvp\Desktop\Thumbnail\bin\Release\GetSiteThumbnail.exe" + " " + @Url + " " + @"C:\\inetpub\wwwroot\wwwroot\images\" + FileName;
+            var final = "/C" + argument;
+            // var argument = @"/C C:\Users\emmaresmvp\Desktop\GetSiteThumbnail.exe" +Url + "C:/Users\\emmaresmvp\\Desktop\\cognifis.jpg 1280 1024 640 480";
+
+            // var argument = @"/C C:\Users\emmaresmvp\Desktop\GetSiteThumbnail.exe" +Url + "C:/Users\\emmaresmvp\\Desktop\\cognifis.jpg 1280 1024 640 480";
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = final;
+            process.StartInfo = startInfo;
+            process.Start();
+
+            return true;
+
+        }
+
         /// <summary>
         /// Wait for it to work.
         /// </summary>
@@ -666,17 +690,19 @@ namespace WhiteListEmail
                                     wc4.Headers.Add("Content-Type", "application/json");
                                     try
                                     {
-                                        wc4.UploadString(hostelastic + "/emmares_search_test/_doc", jsonbody);
+                                        string responese = wc4.UploadString(hostelastic + "/emmares_search_test/_doc", jsonbody);
                                         //delete from pop
+                                        var test = true;
                                         DeleteMessageByUID(uID);
                                         string potdomaila = "C:/inetpub/wwwroot/App_Data/pages/";
                                         System.IO.File.WriteAllText(potdomaila + messageId + ".html", content, Encoding.UTF8);
                                     }
                                     catch (Exception ex)
                                     {
-                                        throw new NotImplementedException();
                                         string logerror = "C:/inetpub/wwwroot/App_Data/errors/";
                                         System.IO.File.WriteAllText(logerror + messageId + ".txt", jsonbody, Encoding.UTF8);
+                                        throw new NotImplementedException();
+
                                     }
 
                                 }
